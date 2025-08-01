@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Factory</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            background-color: rgb(58, 58, 162);
+            padding: 0;
+            box-sizing: border-box;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .topic {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .column {
+            width: 23%;
+            margin: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scale(0.95);
+            opacity: 0;
+            animation: fadeInColumn 1s ease-in-out forwards;
+        }
+
+        .column img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .column:hover img {
+            transform: scale(1.05);
+        }
+
+        .description {
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: justify;
+            opacity: 0;
+            animation: fadeInText 1s ease-in-out forwards;
+        }
+
+        .description h3 {
+            text-align: center;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .read-more-btn:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInColumn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topic">
+    <center><p><h1>Farm Factory</h1></p></center>
+</div>
+    <div class="container">
+        <div class="column">
+            <img src="images/image1.jpeg" alt="images 1">
+            <div class="description">
+                <h3>Maharashtra Agro Industries Development Corporation</h3>
+                <p>Maharashtra Agro Industries Development Corporation Ltd (MAIDC) was founded on 15-Dec-1965 to promote modernisation of the Agro sector through mechanisation and is a manifest example of the forward-looking policies of the state. MAIDC is a profit oriented organization registered under the Companies Act, 1956.</p>
+                <a href="https://maidcmumbai.com/about-us.php" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image2.jpeg" alt="images 2">
+            <div class="description">
+                <h3>Agrochemicals and Fertilizers</h3>
+                <p>Agrochemicals are chemical formulations that are generally used to control pests, pathogens, and supplying nutrients to the soil. The use of agrochemicals (growth regulators, pesticides, and fertilizers) has increased the yield and growth of crop and thus providing stability to the agricultural production.Coromandel International Limited, a subsidiary of the Murugappa Group, is one of India’s premier agrochemical and fertiliser companies. The company is known for its high-quality products and a commitment to sustainable agriculture. Coromandel’s product range includes fertilisers, crop protection, and specialty nutrients.
+                </p>
+                <a href="https://www.andritz.com/separation-en/industries/chemicals/agrochemicals-and-fertilizers" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image3.jpg" alt="images 3">
+            <div class="description">
+                <h3>Crop Protection Solutions</h3>
+                <p>UPL, formerly known as United Phosphorus Limited, is a global leader in crop protection solutions. With a wide range of innovative products, UPL has established itself as a crucial player in the Indian agriculture sector. The company focuses on providing sustainable solutions for farmers, enhancing crop yields, and protecting against pests and diseases.</p>
+                <a href="https://www.bayer.com/en/agriculture/crop-protection" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image4.jpg" alt="images 4">
+            <div class="description">
+                <h3>Agribusiness</h3>
+                <p>Agribusiness is the industry, enterprises, and the field of study of value chains in agriculture and in the bio-economy, in which case it is also called bio-business or bio-enterprise.</p>
+                <a href="https://en.wikipedia.org/wiki/Agribusiness#:~:text=Agribusiness%20is%20the%20industry%2C%20enterprises,%2Dbusiness%20or%20bio%2Denterprise." class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image5.jpeg" alt="images 1">
+            <div class="description">
+                <h3>Agricultural Solutions</h3>
+                <p>PI Industries is a leading agricultural solutions provider known for its innovative agrochemicals, plant protection products, and custom synthesis solutions. The company’s focus on research and development has been instrumental in its growth and success.</p>
+                <a href="https://agriculture.basf.com/global/en/about_us" class="read-more-btn" target="_blank">Read More</a>
+
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image6.jpg" alt="images 2">
+            <div class="description">
+                <h3>Fertiliser Manufacturing</h3>
+                <p>Krishak Bharati Cooperative, or KRIBHCO, is a leading cooperative in the fertiliser sector. KRIBHCO focuses on manufacturing and marketing a variety of fertilisers to support the needs of Indian farmers, contributing to soil health and crop productivity.</p>
+                <a href="https://en.wikipedia.org/wiki/Krishak_Bharati_Cooperative_Limited" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image7.jpeg" alt="images 3">
+            <div class="description">
+                <h3>CPF</h3>
+                <p>CPF (India) Private Limited is a subsidiary of the Thai conglomerate Charoen Pokphand (CP) group. The company is primarily involved in the manufacturing of animal feed, including poultry and aqua feed.CPF (India) Private Limited was incorporated in 1997 as part of the CP group's geographical diversification in India.</p>
+                <a href="https://en.wikipedia.org/wiki/Charoen_Pokphand_Foods" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image9.png" alt="images 4">
+            <div class="description">
+                <h3>Venture Agro</h3>
+                <p>Venture Agro  is founded in the year 2015.It is Indian Government Registered Company. Last five years we provide qualitative and quantitative agro-products. In 2015, our company acquired ISO: 9001:2015 status for our service in Agriculture field.</p>
+                <a href="https://ventureagro.in/about.php" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image10.png" alt="images 1">
+            <div class="description">
+                <h3>Balrampur Chini Mills</h3>
+                <p>Balrampur Chini Mills Limited founded in 1975, is one of the largest sugar manufacturing company in India. It is one of the first sugar companies in the country to diversify its business from sugar to distillery and cogeneration.
+
+                    With a deep and profound sectorial understanding, the Company’s innovative approach to manufacturing has enabled it to successfully create a wide range of co-products ranging from Molasses, Alcohol, Ethanol and Bagasse to Power Generation.</p>
+                    <a href="https://chini.com/about-us/overview/" class="read-more-btn" target="_blank">Read More</a>  
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image11.png" alt="images 2">
+            <div class="description">
+                <h3>Nuziveedu Seeds</h3>
+                <p>Nuziveedu Seeds Limited (NSL) is amongst leading seed companies in India with R&D and breeding programs in diversified Crops. NSL’s elaborate breeding programs are laid on the foundation of excellence in plant breeding for genetic improvement of crops to develop plant varieties with significant genetic gains. NSL’s R&D programs are supported by strong molecular biology and biotechnology system for not only fast tracking varietal development programs, but also to support quality assurance of seeds</p>
+                <a href="https://nuziveeduseeds.com/company-overview/#Genesis&overview" class="read-more-btn" target="_blank">Read More</a> 
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image12.jpeg" alt="images 3">
+            <div class="description">
+                <h3>Mahyco Private Limited</h3>
+                <p>Mahyco Private Limited is focused on research and development, production, processing, and marketing of seeds for India's farming fraternity. Founded in 1964, Mahyco is the pioneer of high quality hybrid and open pollinated seeds. Through the use of cutting edge technology and intensive research activities, Mahyco has revolutionized the agrarian face of the country.</p>
+                <a href="https://www.mahyco.com/about.html" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image13.png" alt="images 4">
+            <div class="description">
+                <h3>Kubota Agricultural Machinery India</h3>
+                <p>Kubota Agricultural Machinery India Private Limited (KAI) is a subsidiary of the Japanese multinational corporation Kubota, specializing in agricultural machinery and equipment. Established in 2008, KAI entered the Indian market to provide advanced, multipurpose tractors tailored to the diverse needs of Indian farmers.</p>
+                <a href="https://www.kubota.com/corporate/identity/index.html" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image14.jpeg" alt="images 1">
+            <div class="description">
+                <h3>Sneha Farms</h3>
+                <p>We are known for the consistency in the quality of all our products, thanks to the excellent backward and forward integration with our Parent Farms, Hatcheries, Feed mills, Broiler farms, Layer farms, Rice bran extraction plant and our world-class Chicken Processing facilities. This diversity and vertical integration made Sneha Group the market leader in the whole chain of poultry production. Our dedication to our employees, our farmers, and most importantly, our chicken allows us to make continuous improvements to our operational procedures and management practices.</p>
+                <a href="https://www.snehagroup.in/about-us/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image15.png" alt="images 2">
+            <div class="description">
+                <h3>Osam Dairy</h3>
+                <p>Osam Dairy, established in 2010, is a dairy company based in Ranchi, Jharkhand, India. The company offers a range of dairy products, including milk, yogurt, lassi, paneer, and sweets, emphasizing purity and freshness by sourcing milk directly from village farms and ensuring it is pasteurized, chilled, and packed without added preservatives or chemicals.
+                The founding team comprises young entrepreneurs dedicated to delivering high-quality dairy products to consumers. Key members include Abhinav Shah (Co-Founder and CEO), Abhishek Raj (Co-Founder and Director of Operations), and Harsh Thakkar (Co-Founder and Head of Sales & Marketing)</p>
+                <a href="https://osamdairy.com/ourstory/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image16.jpeg" alt="images 3">
+            <div class="description">
+                <h3>nurture farm </h3>
+                <p>At nurture.farm, we have come together with the firm belief that we can’t look at these challenges in isolation. Risk, uncertainty, longevity of farm health, farmer prosperity and many more factors need to be understood at an ecosystem level. We need to connect the dots and create holistic, full-stack solutions at every stage of the crop cycle. Only then can we nurture a sustainable ecosystem that creates a resilient farmer. </p>
+                <a href="https://nurture.farm/about-us/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image17.jpeg" alt="images 4">
+            <div class="description">
+                <h3>Arya Collateral Warehousing Services</h3>
+                <p>
+                    Arya Collateral Warehousing Services Private Limited, operating under the brand name Arya.ag, is an Indian company specializing in post-harvest services for the agricultural sector. Established in 1982 and based in Noida, Uttar Pradesh, Arya provides a comprehensive suite of services, including warehousing, warehouse receipt financing, rural storage solutions, and market linkages. 
+                    Arya's platform connects grain growers with buyers, facilitating efficient storage and management of agricultural produce. Their services encompass storage solutions, warehousing management, embedded finance, and market linkages, aiming to streamline the post-harvest process for farmers and traders</p>
+                    <a href="https://www.arya.ag/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image18.jpeg" alt="images 1">
+            <div class="description">
+                <h3>Varika Milk Dairy</h3>
+                <p>Verka is a flagship brand of MILKFED and came into being in 1973 when MILKFED was mandated for milk procurement, quality processing of milk & its products and marketing of these products. “Verka” was christened after the name of the place where the first plant was setup in Amritsar. A trusted brand, Verka has become a household name and is loved by its customers for nutrition, quality and sheer indulgence. It has consolidated its brand strength by not only retaining the high quality of existing products but also by innovating and bringing new products to the tables of its diverse customers.</p>
+                <a href="https://verka.coop/about-us/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/image19.jpg" alt="images 2">
+            <div class="description">
+                <h3>Gramophone</h3>
+                <p>At Gramophone we strive to create a difference in farming by bringing timely information, technology and right kind of inputs to achieve better yields for farmers. Our endeavour is to bring the best products and knowledge to the farmers. Gramophone is one stop solution for all kinds of inputs for the farmers. Farmers can buy genuine crop protection, crop nutrition, seeds, implements and agri hardware at their doorstep. We believe that technology can remove information asymmetry in the agriculture system. Farmers can access localized package of practice, crop advisory, weather information coupled with the best products to grow. This will improve the productivity and help farmers sustainably increase the income from agriculture</p>
+                <a href="https://www.linkedin.com/company/gramophone.co.in/?originalSubdomain=in" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+      
+       
+    </div>
+</body>
+</html>

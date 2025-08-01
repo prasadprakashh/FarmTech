@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1 id="chat-title">Chatbot</h1>
+            <select id="language-selector" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="mr">मराठी</option>
+                <option value="hi">हिंदी</option>
+            </select>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script>
+        const translations = {
+            en: { title: "Chatbot", placeholder: "Type your message...", send: "Send" },
+            mr: { title: "चॅटबॉट", placeholder: "तुमचा संदेश टाइप करा...", send: "पाठवा" },
+            hi: { title: "चैटबॉट", placeholder: "अपना संदेश टाइप करें...", send: "भेजें" }
+        };
+
+        function changeLanguage() {
+            const lang = document.getElementById("language-selector").value;
+            document.getElementById("chat-title").innerText = translations[lang].title;
+            document.getElementById("user-input").placeholder = translations[lang].placeholder;
+            document.getElementById("send-button").innerText = translations[lang].send;
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Column Layout</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            background-color: rgb(58, 58, 162);
+            padding: 0;
+            box-sizing: border-box;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .topic {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .column {
+            width: 23%;
+            margin: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scale(0.95);
+            opacity: 0;
+            animation: fadeInColumn 1s ease-in-out forwards;
+        }
+
+        .column img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .column:hover img {
+            transform: scale(1.05);
+        }
+
+        .description {
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: justify;
+            opacity: 0;
+            animation: fadeInText 1s ease-in-out forwards;
+        }
+
+        .description h3 {
+            text-align: center;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .read-more-btn:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInColumn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topic">
+        <center>
+            <p>
+            <h1>Fresh Vegatables</h1>
+            </p>
+        </center>
+    </div>
+    <div class="container">
+        <div class="column">
+            <img src="images/carrot1.jpg" alt="Image 1">
+            <div class="description">
+                <h3>Carrot</h3>
+                <p>Carrots are rich in beta-carotene (vitamin A precursor), fiber, vitamin K1, potassium, and
+                    antioxidants.They come in orange, purple, red, yellow, and white, with colors from pigments like
+                    carotenoids and anthocyanins.Carrots are versatile, eaten raw, cooked, or juiced, and used in dishes
+                    like salads, soups, and desserts.They support eye health, lower cholesterol, and may reduce cancer
+                    risk due to antioxidants and fiber.</p>
+                <a href="https://en.wikipedia.org/wiki/Carrot" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Broccoli.jpeg" alt="Image 2">
+            <div class="description">
+                <h3>Broccoli</h3>
+                <p>Broccoli is a highly nutritious, low-calorie vegetable rich in vitamins (C and K), minerals
+                    (potassium, calcium), fiber, and antioxidants, often considered a superfood. It boosts immunity,
+                    supports heart health, aids digestion, and contains sulforaphane, a compound with potential
+                    cancer-preventing properties. italica. It’s versatile in
+                    cooking—enjoyed raw, steamed, boiled, roasted, or stir-fried in various dishes.</p>
+                <a href="https://en.wikipedia.org/wiki/Broccoli" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/potato.jpeg" alt="Image 3">
+            <div class="description">
+                <h3>Potato</h3>
+                <p>Potatoes are rich in carbohydrates, vitamins (C, B6), potassium, and fiber, providing energy and
+                    essential nutrients.A widely consumed crop, potatoes are the fourth most important food after rice,
+                    wheat, and maize.Available in various types like russet and red, they can be boiled, baked, mashed,
+                    fried, or roasted.Native to South America, potatoes were domesticated 7,000 years ago and are now
+                    grown worldwide.</p>
+                <a href="https://en.wikipedia.org/wiki/Potato" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Tomato.avif" alt="Image 4">
+            <div class="description">
+                <h3>Tomato</h3>
+                <p>Tomatoes are rich in vitamins C, A, K, and antioxidants like lycopene, which support heart
+                    health.Versatile in cooking, they are used in sauces, soups, salads, and as pizza or pasta
+                    toppings. Available in types like cherry, plum, beefsteak, and heirloom, beefsteak, and heirloom,
+                    each with distinct flavors
+                    and sizes.Native to South America, tomatoes are now grown worldwide and are a staple in many
+                    cuisines.</p>
+                <a href="https://en.wikipedia.org/wiki/Tomato" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Spinach.jpeg" alt="Image 1">
+            <div class="description">
+                <h3>Spinach</h3>
+                <p>
+                    Spinach is a low-calorie, nutrient-rich vegetable packed with vitamins A, C, K, iron, calcium,
+                    magnesium, and antioxidants. It supports bone health, improves eye health, aids digestion, and
+                    promotes heart health. Versatile in cooking,
+                    enhancing nutrient absorption. Spinach comes in savoy, flat-leaf, and semi-savoy varieties and is
+                    frozen.</p>
+                <a href="https://en.wikipedia.org/wiki/Spinach" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Cabbage.jpeg" alt="Image 2">
+            <div class="description">
+                <h3>Cabbage</h3>
+                <p>Cabbage is a low-calorie vegetable rich in vitamins C and K, fiber, and antioxidants, promoting
+                    health and immunity. It aids digestion, supports heart health, and may have cancer-preventive
+                    properties. Versatile in cooking, it’s used raw, fermented, or cooked in various dishes. Common
+                    types include green, red, savoy, and Napa cabbage.</p>
+                <a href="https://en.wikipedia.org/wiki/Cabbage" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Onion.jpg" alt="Image 3">
+            <div class="description">
+                <h3>Onion</h3>
+                <p>Onions are low-calorie, nutrient-rich bulbs high in vitamin C, B vitamins, and antioxidants like
+                    quercetin. They support heart health, digestion, and immunity while offering antibacterial benefits.
+                    Versatile in cooking, they’re used raw, pickled, or as a flavor base in various dishes. Common types
+                    include yellow, red, white, and sweet onions.</p>
+                <a href="https://en.wikipedia.org/wiki/Onion" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Radish.jpeg" alt="Image 4">
+            <div class="description">
+                <h3>Radish</h3>
+                <p>Radishes are low-calorie roots rich in vitamin C, potassium, and antioxidants, boosting immunity and
+                    reducing inflammation. They aid digestion, support liver health, and help regulate blood sugar.
+                    Versatile in cooking, radishes are eaten raw, pickled, roasted, or as garnishes. Varieties include
+                    red globe, daikon, watermelon, and black radishes.</p>
+                <a href="https://en.wikipedia.org/wiki/Radish" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Cucumber.jpg" alt="Image 1">
+            <div class="description">
+                <h3>Cucumber</h3>
+                <p>Low Calories, High Water: Cucumbers are 95% water, low in calories, and provide small amounts of
+                    vitamins like K and C.Most cucumber cultivars are seeded and require pollination. For this purpose,
+                    thousands of honey beehives are annually carried to cucumber fields just before bloom.
+                    Varieties: Includes slicing, pickling, and seedless cucumbers, each suited for specific uses.
+                    Health Benefits: They promote hydration, aid digestion, and provide antioxidants.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Cucumber" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Beetroot.jpg" alt="Image 2">
+            <div class="description">
+                <h3>Beetroot</h3>
+                <p>Beetroot are high in fiber, folate, potassium, iron, and vitamin C, with low calories.Boosts heart
+                    health, blood flow, and exercise performance due to nitrates. Versatile—can be eaten raw, cooked, or
+                    juiced; used as a natural dye.: Contains betalains, offering antioxidant and anti-inflammatory
+                    benefits.It is one of several cultivated varieties of Beta vulgaris subsp. vulgaris grown for their
+                    edible taproots or leaves, classified as belonging to the Conditiva Group.</p>
+                <a href="https://en.wikipedia.org/wiki/Beetroot" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Green Beans.jpg" alt="Image 3">
+            <div class="description">
+                <h3>Green Beans</h3>
+                <p>Green beans are low in calories and a good source of fiber, vitamin C, vitamin K, and folate.They
+                    support digestive health, boost immunity, and promote healthy bones due to their nutrient
+                    content. sautéed, or added to salads and casseroles for a variety
+                    of dishes.Also called string beans or they are harvested while still immature, making
+                    them tender and crisp. In the Philippines, they are also known as "Baguio beans" or "habichuelas" to
+                    distinguish them from yardlong beans.</p>
+                <a href="https://en.wikipedia.org/wiki/Green_bean" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Garlic.jpg" alt="Image 4">
+            <div class="description">
+                <h3>Garlic</h3>
+                <p>Garlic is low in calories and rich in manganese, vitamin C, vitamin B6, and antioxidants.Known for
+                    boosting immunity, reducing blood pressure, improving heart health, and having antimicrobial
+                    properties.Widely used as a flavoring in cooking, it can be roasted, sautéed, minced, or eaten raw
+                    for its pungent taste.Contains allicin, a compound responsible for its distinct aroma and many of
+                    its health benefits.</p>
+                <a href="https://en.wikipedia.org/wiki/Garlic" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Cauliflower.jpg" alt="Image 1">
+            <div class="description">
+                <h3>Cauliflower</h3>
+                <p>Cauliflower is low in calories and rich in fiber, vitamin C, vitamin K, and antioxidants.It supports
+                    digestion, boosts immunity, and may reduce inflammation and the risk of chronic diseases.Cauliflower
+                    can be roasted, steamed, mashed, or used as a low-carb substitute in dishes like rice or pizza
+                    crust.Part of the cruciferous vegetable family, it comes in varieties like white, purple, green, and
+                    orange.Only the head is typically eaten; the edible white flesh is sometimes called "curd".</p>
+                <a href="https://en.wikipedia.org/wiki/Cauliflower" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Pumpkin.jpg" alt="Image 2">
+            <div class="description">
+                <h3>Pumpkin</h3>
+                <p>Pumpkins are low in calories and rich in fiber, vitamin A, vitamin C, potassium, and antioxidants
+                    like beta-carotene.They support eye health, boost immunity, improve digestion, and may promote heart
+                    health due to their high nutrient content.Pumpkins can be roasted, pureed for soups, baked into
+                    pies, or used in smoothies, and even in savory dishes like curries and stews.Pumpkins come in a
+                    variety of colors, including orange, white, and green, and are often associated with fall festivals
+                    and Halloween.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Pumpkin" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Brinjal.jpg" alt="Image 3">
+            <div class="description">
+                <h3>Brinjal</h3>
+                <p>Brinjal is low in calories and rich in fiber, antioxidants, vitamin C, vitamin K, and potassium.It
+                    supports heart health, aids digestion, helps in weight management, and contains compounds that may
+                    reduce the risk of chronic diseases.Versatile in cooking and dips like baba ganoush.Known for its
+                    glossy purple skin, brinjal comes in
+                    various shapes, sizes, and colors, including white and green varieties.Some common cultivars have
+                    fruit that is egg-shaped, glossy, "meaty" texture.</p>
+                <a href="https://en.wikipedia.org/wiki/Eggplant" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Bell pepper.jpg" alt="Image 4">
+            <div class="description">
+                <h3>Bell pepper</h3>
+                <p>Bell peppers are low in calories and high in vitamin C, vitamin A, fiber, and antioxidants,
+                    particularly carotenoids.They support immune function, promote healthy skin, improve eye health, and
+                    help reduce inflammation.Bell peppers can be eaten raw in salads, roasted, grilled, sautéed, or
+                    stuffed for a variety of dishes.They come in a variety of colors, including green, red, yellow, and
+                    orange, with each color offering slightly different flavors and nutrients.</p>
+                <a href="https://en.wikipedia.org/wiki/Bell_pepper" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Leek.png" alt="Image 1">
+            <div class="description">
+                <h3>Leek</h3>
+                <p>Leeks are low in calories and a good source of fiber, vitamin K, vitamin A, vitamin C, and
+                    folate.They support digestive health, improve heart health, and may help regulate blood sugar levels
+                    due to their antioxidants and fiber content.Leeks are used in soups, stews, salads, and as a
+                    garnish. They can be sautéed, roasted, or added to various savory dishes.Part of the allium family,
+                    leeks have a milder flavor compared to onions and garlic.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Leek" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/pea.jpg" alt="Image 2">
+            <div class="description">
+                <h3>Pea</h3>
+                <p>Peas are rich in protein, fiber, vitamin K, vitamin C, and folate, while being low in calories.They
+                    promote digestive health, support heart health, and aid in weight management due to their fiber and
+                    protein content.Peas can be eaten fresh, frozen, or dried. They're commonly used in soups, salads,
+                    stir-fries, and as side dishes.Peas come in several varieties, including green peas, snow peas, and
+                    snap peas, each with distinct textures and flavors.</p>
+                <a href="https://en.wikipedia.org/wiki/Pea" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Fenugreek.jpg" alt="Image 3">
+            <div class="description">
+                <h3>Fenugreek</h3>
+                <p>Fenugreek is rich in protein, fiber, iron, magnesium, and vitamin B6, and is low in calories.It
+                    supports digestion, helps regulate blood sugar levels, boosts milk production in breastfeeding
+                    women, and may aid in lowering cholesterol.Fenugreek seeds and leaves are used in cooking,
+                    especially in Indian, Middle Eastern, and Mediterranean cuisines,slightly bitter taste and a strong
+                    aroma, and its
+                    seeds contain compounds that contribute to its health benefits.</p>
+                <a href="https://en.wikipedia.org/wiki/Fenugreek" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/luffa.jpg" alt="Image 4">
+            <div class="description">
+                <h3>Luffa</h3>
+                <p>Luffa is low in calories and a good source of vitamins A and C, along with fiber and antioxidants.It
+                    supports digestion, promotes skin health, and is believed to have anti-inflammatory properties.Young
+                    luffa can be eaten as a vegetable, often cooked in soups or stir-fries, while mature luffa is
+                    commonly used as a natural sponge.Luffa is actually a gourd, and when fully mature, its fibrous
+                    interior is harvested to make loofah sponges, popular in bath and cleaning products.</p>
+                <a href="https://en.wikipedia.org/wiki/Luffa" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Zucchini.jpg" alt="Image">
+            <div class="description">
+                <h3>Zucchini</h3>
+                <p>Zucchini, also known as courgette, is a low-calorie vegetable rich in vitamins A, C, and potassium.
+                    It supports eye health, boosts immunity, and promotes digestion. Versatile in cooking, zucchini can
+                    be grilled, sautéed, roasted. Originating in the Americas, it is widely grown and enjoyed worldwide.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Zucchini" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="images/Okra.JPG" alt="Image">
+            <div class="description">
+                <h3>Okra</h3>
+                <p>Okra, also known as ladyfinger, is a low-calorie vegetable high in vitamins C and K, fiber, and
+                    antioxidants. It promotes healthy digestion, supports heart health, and may help regulate blood
+                    sugar. Commonly used in soups, stews, and curries, it is a staple in many tropical and subtropical
+                    cuisines worldwide.</p>
+                <a href="https://en.wikipedia.org/wiki/Okra" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="images/Turnip.jpg" alt="Image">
+            <div class="description">
+                <h3>Turnip</h3>
+                <p>Turnips are nutrient-rich root vegetables low in calories and high in vitamin C, potassium, and
+                    fiber. They support digestion, immunity, and bone health. Turnips can be roasted, mashed, or added
+                    to soups and stews. Both the root and leafy greens are edible and widely used in cooking across the
+                    globe.</p>
+                <a href="https://en.wikipedia.org/wiki/Turnip" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="images/BokChoy.jpg" alt="Image">
+            <div class="description">
+                <h3>Bok Choy</h3>
+                <p>Bok choy, also known as Chinese cabbage, is a low-calorie, nutrient-dense leafy vegetable rich in
+                    vitamins A, C, and K, calcium, and antioxidants. It supports bone health, improves immunity, and
+                    promotes digestion. Commonly used in Asian cuisines, it can be stir-fried, steamed, or added to
+                    soups and salads.</p>
+                <a href="https://en.wikipedia.org/wiki/Bok_choy" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="topic">
+        <center>
+            <p>
+            <h1>Fresh Fruit</h1>
+            </p>
+        </center>
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <img src="images/apple.jpeg" alt="Apple">
+            <div class="description">
+                <h3>Apple</h3>
+                <p>Apples are rich in dietary fiber, vitamin C, and antioxidants, making them a healthy and versatile
+                    fruit. They promote digestion, heart health, and weight management. Apples come in various
+                    varieties, such as Fuji, Gala, and Granny Smith, each offering unique flavors and textures. They can
+                    be enjoyed raw, baked, juiced, or added to salads and desserts.</p>
+                <a href="https://en.wikipedia.org/wiki/Apple" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="images/banana.jpeg" alt="Banana">
+            <div class="description">
+                <h3>Banana</h3>
+                <p>Bananas are a great source of potassium, vitamin B6, vitamin C, and dietary fiber. Known for their
+                    energy-boosting properties, they are perfect as a snack or a quick breakfast. Bananas support heart
+                    health, digestive health, and muscle function. They can be eaten raw, added to smoothies, or used in
+                    desserts like banana bread or pudding.</p>
+                <a href="https://en.wikipedia.org/wiki/Banana" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="images/orange.jpg" alt="Orange">
+            <div class="description">
+                <h3>Orange</h3>
+                <p>Oranges are packed with vitamin C, dietary fiber, and antioxidants, making them a great immune
+                    booster. They improve skin health, aid in digestion, and support heart health. Oranges are enjoyed
+                    fresh, juiced, or in various recipes like salads, desserts, and marinades. Popular varieties include
+                    navel, Valencia, and blood oranges.</p>
+                <a href="https://en.wikipedia.org/wiki/Orange" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="images/grapes.jpeg" alt="Grape">
+            <div class="description">
+                <h3>Grape</h3>
+                <p>Grapes are small, nutrient-dense fruits rich in vitamins C and K, antioxidants, and fiber. They
+                    support heart health, improve skin health, and provide anti-inflammatory benefits due to their high
+                    resveratrol content. Grapes come in red, green, and purple varieties and are enjoyed fresh, dried
+                    (as raisins), or in juices and wines.</p>
+                <a href="https://en.wikipedia.org/wiki/Grape" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="images/strawberry.jpg" alt="Strawberry">
+            <div class="description">
+                <h3>Strawberry</h3>
+                <p>Strawberries are bright red fruits rich in vitamin C, manganese, and antioxidants. They promote heart
+                    health, skin health, and may help regulate blood sugar levels. Strawberries are enjoyed fresh, in
+                    smoothies, as dessert toppings, or in jams and sauces. Their sweet-tart flavor makes them a favorite
+                    in many dishes.</p>
+                <a href="https://en.wikipedia.org/wiki/Strawberry" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="images/mango.jpeg" alt="Mango">
+            <div class="description">
+                <h3>Mango</h3>
+                <p>Mangoes, often called the "king of fruits," are rich in vitamins A, C, and E, as well as fiber and
+                    antioxidants. They support immune health, promote digestion, and improve skin health. Mangoes can be
+                    enjoyed fresh, in smoothies, or as part of salads, desserts, and chutneys. Their sweet and juicy
+                    taste makes them a tropical favorite.</p>
+                <a href="https://en.wikipedia.org/wiki/Mango" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="images/Pineapple.jpg" alt="Pineapple">
+            <div class="description">
+                <h3>Pineapple</h3>
+                <p>Pineapples are tropical fruits rich in vitamin C, manganese, and bromelain, an enzyme that aids
+                    digestion and reduces inflammation. They boost the immune system, promote skin health, and support
+                    bone strength. Pineapples are enjoyed fresh, juiced, or used in desserts, savory dishes, and
+                    tropical drinks.</p>
+                <a href="https://en.wikipedia.org/wiki/Pineapple" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="images/Blueberries.jpg" alt="Blueberry">
+            <div class="description">
+                <h3>Blueberry</h3>
+                <p>Blueberries are nutrient-dense fruits high in vitamins C and K, fiber, and powerful antioxidants like
+                    anthocyanins. They improve brain health, support heart health, and promote healthy aging.
+                    Blueberries are enjoyed fresh, in smoothies, baked goods, or as toppings for cereals and desserts.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Blueberry" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="images/Kiwi.jpg" alt="Kiwi">
+            <div class="description">
+                <h3>Kiwi</h3>
+                <p>Kiwis are small, green fruits rich in vitamin C, vitamin K, and antioxidants. They promote digestion,
+                    boost immunity, and improve skin health. Their tangy and sweet flavor makes them a favorite in fruit
+                    salads, smoothies, and desserts. The tiny seeds are edible and add a crunchy texture.</p>
+                <a href="https://en.wikipedia.org/wiki/Kiwi" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="images/Pears.jpg" alt="Pear">
+            <div class="description">
+                <h3>Pear</h3>
+                <p>Pears are juicy, fiber-rich fruits packed with vitamins C and K and antioxidants. They support
+                    digestion, improve gut health, and promote heart health. Pears come in many varieties, including
+                    Bartlett, Anjou, and Bosc, each with a unique taste and texture. Enjoy them fresh, poached, or baked
+                    into desserts.</p>
+                <a href="https://en.wikipedia.org/wiki/Pear" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/peach.jpg" alt="Peach">
+            <div class="description">
+                <h3>Peach</h3>
+                <p>Peaches are juicy and aromatic fruits rich in vitamins A, C, and E, along with fiber and antioxidants. They promote skin health, improve digestion, and support immune health. Peaches can be eaten fresh, grilled, baked in desserts, or blended into smoothies. Their sweet and slightly tangy flavor makes them a summer favorite.</p>
+                <a href="https://en.wikipedia.org/wiki/Peach" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <div class="column">
+            <img src="images/Plums.jpg" alt="Plum">
+            <div class="description">
+                <h3>Plum</h3>
+                <p>Plums are small, sweet-tart fruits rich in vitamins C and K, fiber, and antioxidants. They support bone health, improve digestion, and may help regulate blood sugar levels. Plums can be eaten fresh, dried (as prunes), or used in jams, desserts, and savory dishes. Their vibrant colors range from deep purple to yellow.</p>
+                <a href="https://en.wikipedia.org/wiki/Plum" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <div class="column">
+            <img src="images/pomegranate.jpg" alt="Pomegranate">
+            <div class="description">
+                <h3>Pomegranate</h3>
+                <p>Pomegranates are nutrient-dense fruits packed with antioxidants, vitamins C and K, and fiber. They are known for their anti-inflammatory properties, heart health benefits, and immune-boosting effects. The juicy seeds, called arils, are enjoyed fresh, as a garnish, or juiced. Their vibrant red color makes them visually appealing.</p>
+                <a href="https://en.wikipedia.org/wiki/Pomegranate" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <div class="column">
+            <img src="images/watermelon.jpg" alt="Watermelon">
+            <div class="description">
+                <h3>Watermelon</h3>
+                <p>Watermelon is a hydrating fruit made up of 92% water and rich in vitamins A, C, and antioxidants like lycopene. It helps keep you refreshed, supports heart health, and promotes skin health. Watermelons are enjoyed fresh, in salads, or as juice. Their sweet, juicy taste makes them a summer favorite.</p>
+                <a href="https://en.wikipedia.org/wiki/Watermelon" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <div class="column">
+            <img src="images/dragonfruit.jpg" alt="Dragon Fruit">
+            <div class="description">
+                <h3>Dragon Fruit</h3>
+                <p>Dragon fruit, also known as pitaya, is a tropical fruit with a vibrant pink or yellow skin and white or red flesh dotted with tiny seeds. It is rich in vitamin C, iron, and antioxidants, promoting healthy skin, digestion, and immunity. Its mild, sweet flavor makes it great for smoothies and salads.</p>
+                <a href="https://en.wikipedia.org/wiki/Dragon_fruit" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <div class="column">
+            <img src="images/cherry.jpg" alt="Cherry">
+            <div class="description">
+                <h3>Cherry</h3>
+                <p>Cherries are small, round fruits packed with vitamin C, potassium, and antioxidants. They support heart health, improve sleep quality, and reduce inflammation. Cherries are enjoyed fresh, in desserts like pies, or as toppings for yogurt and ice cream. Sweet and tart varieties are available, catering to diverse tastes.</p>
+                <a href="https://en.wikipedia.org/wiki/Cherry" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <div class="column">
+            <img src="images/papaya.jpg" alt="Papaya">
+            <div class="description">
+                <h3>Papaya</h3>
+                <p>Papayas are tropical fruits rich in vitamin C, vitamin A, and an enzyme called papain, which aids digestion. They support skin health, boost immunity, and promote gut health. Papayas are enjoyed fresh, in smoothies, or in salads. Their soft, sweet flesh pairs well with lime juice for a refreshing snack.</p>
+                <a href="https://en.wikipedia.org/wiki/Papaya" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <div class="column">
+            <img src="images/coconut.jpg" alt="Coconut">
+            <div class="description">
+                <h3>Coconut</h3>
+                <p>Coconuts provide hydrating water, nutrient-rich flesh, and versatile oil. They are high in healthy fats, fiber, and minerals like manganese and magnesium. Coconut supports energy production, bone health, and hydration. Enjoy it fresh, as milk, or in curries and desserts. Coconut is a staple in tropical cuisines worldwide.</p>
+                <a href="https://en.wikipedia.org/wiki/Coconut" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <div class="column">
+            <img src="images/guava.jpg" alt="Guava">
+            <div class="description">
+                <h3>Guava</h3>
+                <p>Guavas are tropical fruits rich in vitamin C, fiber, and potassium. They promote digestive health, support immunity, and improve skin health. Guavas can be eaten fresh, juiced, or used in jams and desserts. The sweet and aromatic fruit is often enjoyed with a sprinkle of salt or chili powder.</p>
+                <a href="https://en.wikipedia.org/wiki/Guava" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <div class="column">
+            <img src="images/raspberry.jpg" alt="Raspberry">
+            <div class="description">
+                <h3>Raspberry</h3>
+                <p>Raspberries are vibrant red fruits high in dietary fiber, vitamins C and K, and antioxidants. They support heart health, aid digestion, and promote healthy aging. Raspberries are enjoyed fresh, in smoothies, as a topping for desserts, or in baked goods like muffins and pies. Their sweet-tart flavor is widely loved.</p>
+                <a href="https://en.wikipedia.org/wiki/Raspberry" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

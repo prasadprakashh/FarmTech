@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Column Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome Link -->
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0a0a0a;
+            flex-direction: column; /* This ensures the content stacks vertically */
+        }
+
+        .box p {
+            margin: 5px 0;
+            color: #1e7ae3;
+            line-height: 1.5;
+            /* Adjusts line spacing */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 1500px;
+        }
+
+        .box {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(25% - 20px);
+            box-sizing: border-box;
+        }
+
+        .box img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            transition: filter 0.3s ease;
+            filter: grayscale(100%);
+        }
+
+        .box img:hover {
+            filter: grayscale(0%);
+        }
+
+        .box h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2em;
+        }
+
+        .box p {
+            margin: 5px 0;
+            color: #1e7ae3;
+        }
+
+        .box p:not(:first-child) {
+            text-align: left;
+        }
+
+        .member {
+            color: rgb(255, 255, 255);
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center; /* Centers the "Team Members" text */
+            margin-bottom: 20px; /* Adds space between the title and the boxes */
+        }
+
+        /* Social media icons styling */
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .social-icons a:hover {
+            color: #1e7ae3;
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="member">
+        <h1>Team Members</h1>
+    </div>
+    <div class="container">
+        <div class="box">
+            <img src="image/pc.jpg" alt="Profile Picture">
+            <h3>Prasad Prakash Chougule</h3>
+            <p>Mobile: 9356467029</p>
+            <p>Email:prasadprakash2610@gmail.com</p>
+            <p>BOD: 26/10/2005</p>
+            <p>Role: Software Developer</p>
+            <p>Skills: Leadership, Communication</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/prasadprakash_?igsh=MTZydDM5dm40enBreQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/9356467029" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/prasad-chougule-871b752a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="image/pathya.jpg" alt="Profile Picture">
+            <h3>Prathamesh Prakash Lavhate</h3>
+            <p>Mobile: 8999054381</p>
+            <p>Email:prathameshlavhate02@gmail.com</p>
+            <p>BOD: 02/01/2006</p>
+            <p>Role: Graphic Designer</p>
+            <p>Skills: Design, PHP</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/__pathya_02__?igsh=dndxcjJwZWJma3N1" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/8999054381" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/prathamesh-lavhate-3953332a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image/pratik.jpg" alt="Profile Picture">
+            <h3>Pratik Ananda Sutar</h3>
+            <p>Mobile: 7028480130</p>
+            <p>Email: pratiksutar9478@gmail.com</p>
+            <p>BOD: 18/11/2006</p>
+            <p>Role: Content Writer</p>
+            <p>Skills: Writing, Manual Testing</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/pratiksutar9478?igsh=MWtnNWk0b3U5b252Yg==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/7028480130" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/p%CA%80%E1%B4%80%E1%B4%9B%C9%AA%E1%B4%8B-s%E1%B4%9C%E1%B4%9B%E1%B4%80%CA%80-880ba8252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="image/dev.jpg" alt="Profile Picture">
+            <h3>Dev Dattatray Khairmode</h3>
+            <p>Mobile: 9623048329</p>
+            <p>Email: devkhairmode1107@gmail.com</p>
+            <p>BOD: 11/01/2007</p>
+            <p>Role: Digital Marketer</p>
+            <p>Skills: Marketing, Social Media </p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/dev_khairmode.11?igsh=MXFubHoyZ250aWRlMA==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/9623048329" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Column Layout</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            background-color: rgb(58, 58, 162);
+            padding: 0;
+            box-sizing: border-box;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .topic {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .column {
+            width: 23%;
+            margin: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scale(0.95);
+            opacity: 0;
+            animation: fadeInColumn 1s ease-in-out forwards;
+        }
+
+        .column img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .column:hover img {
+            transform: scale(1.05);
+        }
+
+        .description {
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: justify;
+            opacity: 0;
+            animation: fadeInText 1s ease-in-out forwards;
+        }
+
+        .description h3 {
+            text-align: center;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .read-more-btn:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInColumn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topic">
+    <center><p><h1>Agriculture Products</h1></p></center>
+</div>
+    <div class="container">
+        <div class="column">
+            <img src="images/rice.jpeg" alt="images 1">
+            <div class="description">
+                <h3>Rice Crops</h3>
+                <p>Rice is a food crop that is an essential part of a meal worldwide. It is used for making desserts, puddings, or ground rice flour. The rice plant is a member of the grass family called Poaceae. It is cultivated as an agricultural crop with an annual yield of 535 million tons. In Asia alone, over 300 million acres of land are used to grow rice.</p>
+                <a href="https://www.ricearray.org/editorial/rice-history-culture-guide/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/sugarcane.jpeg" alt="images 2">
+            <div class="description">
+                <h3>Sugarcane Crops</h3>
+                <p>Sugarcane is also a potential energy crop. Sugarcane is also an important industrial crop. That’s why the demand of sugarcane is increasing globally. Sugarcane is species of tall perennial grass in the genus Saccharum. Plant can grow up to 3 to 6 feet in height. According to wikipedia, sugarcane is the world’s largest crop by production.</p>
+                <a href="https://en.wikipedia.org/wiki/Sugarcane" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/corn.jpeg" alt="images 3">
+            <div class="description">
+                <h3>Corn Crops</h3>
+                <p>corn, (Zea mays), cereal plant of the grass family (Poaceae) and its edible grain. The domesticated crop originated in the Americas and is one of the most widely distributed of the world’s food crops. Corn is used as human food, livestock feed, as biofuel, and as raw material in industry.</p>
+                <a href="https://www.britannica.com/plant/corn-plant" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/peenut.jpeg" alt="images 4">
+            <div class="description">
+                <h3>Peanut Crops</h3>
+                <p>The peanut, also known as the groundnut, goober, goober pea, pindar or monkey nut, is a legume crop grown mainly for its edible seeds. It is widely grown in the tropics and subtropics by small and large commercial producers, both as grain legume and as an oil crop.</p>
+                <a href="https://nationalpeanutboard.org/news/how-peanuts-grow/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Pesticides.jpeg" alt="images 1">
+            <div class="description">
+                <h3>Pesticides</h3>
+                <p>Pesticides are indispensable in agricultural production. They have been used by farmers to control weeds and insects, and their remarkable increases in agricultural products have been reported. The increase in the world’s population in the 20th century could not have been possible without a parallel increase in food production. About one-third of agricultural products are produced depending on the application of pesticides.</p>
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7908628/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/milkfarm.jpeg" alt="images 2">
+            <div class="description">
+                <h3>Milk Farming</h3>
+                <p>Dairy farming is a class of agriculture for the long-term production of milk, which is processed (either on the farm or at a dairy plant, either of which may be called a dairy) for the eventual sale of a dairy product. Dairy farming has a history that goes back to the early Neolithic era, around the seventh millennium BC, in many regions of Europe and Africa. Before the 20th century, milking was done by hand on small farms.</p>
+                <a href="https://en.wikipedia.org/wiki/Dairy_farming" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/Insectisides.jpeg" alt="images 3">
+            <div class="description">
+                <h3>Insectisides</h3>
+                <p>Insecticides are chemicals used to control insects by killing them or preventing them from engaging in undesirable or destructive behaviors. They are classified based on their structure and mode of action.
+
+                    Many insecticides act upon the insect's nervous system (e.g., cholinesterase inhibition), while others act as growth regulators or endotoxins.</p>
+                <a href="https://www.epa.gov/caddis/insecticides" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/impactofrain.jpeg" alt="images 4">
+            <div class="description">
+                <h3>Impact Of Rain </h3>
+                <p>Rainfall is one of the primary factors affecting soil erosion and crop production under rain-fed agriculture. The review sought to quantify the effect of rainfall or moisture on crop production. The Rainfall distribution, amount and intensity as well as rain fall season was reviewed in relation to crop growth and development response., As research show the effect of drought on barley showed that, during the vegetative stage, water stress primarily reduced yields by a reduction in light interception arising from smaller leaves. However, for stress during the grain filling phase, yields were reduced almost equally by reduced photosynthesis per unit area arising from leaf senescence</p>
+                <a href="https://www.researchgate.net/publication/332766767_Review_on_the_Effect_of_Moisture_or_Rain_Fall_on_Crop_Production" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/fishfarm.jpeg" alt="images 1">
+            <div class="description">
+                <h3>Fish Farming</h3>
+                <p>Fish farming or pisciculture involves commercial breeding of fish, most often for food, in fish tanks or artificial enclosures such as fish ponds. It is a particular type of aquaculture, which is the controlled cultivation and harvesting of aquatic animals such as fish, crustaceans, molluscs and so on, in natural or pseudo-natural environments. A facility that releases juvenile fish into the wild for recreational fishing or to supplement a species' natural numbers is generally referred to as a fish hatchery. Worldwide, the most important fish species produced in fish farming are carp, catfish, salmon and tilapia</p>
+                <a href="https://en.wikipedia.org/wiki/Fish_farming" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/farmtools.jpeg" alt="images 2">
+            <div class="description">
+                <h3>Farming Tools</h3>
+                <p>Farm tools are simple handy tools constructed by the farmer or local craftsmen to carry out some basic farming operations. Farmers who grow crops and keep animals usually use some simple tools to help make their work easier and faster. What are the advantages of using the farm tools? The Three Major Benefits of Having Quality Agricultural Equipment</p>
+                <a href="https://agrolearner.com/farming-tools-and-equipment-and-their-uses/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/farmhen.jpeg" alt="images 3">
+            <div class="description">
+                <h3>Farming Hen</h3>
+                <p>Our free range hens have the ability to freely go outside and frolic and forage in green Midwest pastures. All of our eggs are cleaned and packaged at our 100% solar powered processing plant. When you buy Farmers Hen House, you're buying eggs that not only taste good, but do good for hen, the farmer, the environment, and most importantly, for you!</p>
+                <a href="https://www.wikihow.com/Start-a-Chicken-Farm" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/farmereducation.jpeg" alt="images 4">
+            <div class="description">
+                <h3>Agriculture Education</h3>
+                <p>Farmers require ongoing education to stay aware of fast-moving developments in technology, science, business management, and an array of other skills and fields that affect agricultural operations.</p>
+                <a href="https://www.ffa.org/agricultural-education/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/advanceagri.jpeg" alt="images 1">
+            <div class="description">
+                <h3>Advance Agriculture</h3>
+                <p>At a time when the agricultural industry faces various hardships, including growing consumer demand and the impacts of climate change, it’s fortunate that technology solutions are fast advancing. Indeed, the global agriculture technology market is currently worth $24.08 billion and is expected to surpass $40 billion by 2030. 
+                Before we delve into the pros and cons of agriculture technology and consider what the future holds, let’s explore some of the industry’s hottest trends. </p>
+                <a href="https://www.thomasnet.com/insights/agricultural-technologies/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+       
+        <div class="column">
+            <img src="images/wheat.jpeg" alt="images 5">
+            <div class="description">
+                <h3>Wheat Crops</h3>
+                <p>Wheat is a grass widely cultivated for its seed, a cereal grain which is a worldwide staple food. It is grown on more land area than any other food crop and provides more calories and protein in the global diet than any other crop.</p>
+                <a href="https://www.britannica.com/plant/wheat" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/soybean.jpeg" alt="images 6">
+            <div class="description">
+                <h3>Soybean Crops</h3>
+                <p>Soybeans are a species of legume native to East Asia and widely grown for their edible beans, which have numerous uses. They are a primary source of vegetable protein and are processed into oil, flour, and other products.</p>
+                <a href="https://www.nass.usda.gov/Charts_and_Maps/Field_Crops/sb-prod.php" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/cotton.jpeg" alt="images 7">
+            <div class="description">
+                <h3>Cotton Crops</h3>
+                <p>Cotton is a soft, fluffy staple fiber that grows in a boll, or protective case, around the seeds of cotton plants. It is primarily used in textile production, making it one of the world's most important non-food crops.</p>
+                <a href="https://www.cotton.org/econ/cropinfo/cropdata.cfm" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/banana.jpeg" alt="images 8">
+            <div class="description">
+                <h3>Banana Crops</h3>
+                <p>Bananas are one of the most consumed fruits in the world and are a major cash crop in many tropical countries. They are a great source of essential nutrients like potassium, vitamin C, and dietary fiber.</p>
+                <a href="https://www.britannica.com/plant/banana-plant" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+       
+        <div class="column">
+            <img src="images/coffee.jpeg" alt="images 11">
+            <div class="description">
+                <h3>Coffee Crops</h3>
+                <p>Coffee is a globally traded commodity and is cultivated in tropical regions. Its beans are roasted and ground to make one of the world's most popular beverages. The crop thrives in areas with moderate rainfall and rich soil.</p>
+                <a href="https://www.worldcoffeeportal.com/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/apple.jpeg" alt="images 12">
+            <div class="description">
+                <h3>Apple Orchards</h3>
+                <p>Apples are a popular fruit grown in temperate climates worldwide. They are a rich source of dietary fiber and vitamin C, making them a key element in healthy diets.</p>
+                <a href="https://www.britannica.com/plant/apple-fruit" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/mango.jpeg" alt="images 13">
+            <div class="description">
+                <h3>Mango Orchards</h3>
+                <p>Mangoes are tropical stone fruits known for their sweet, juicy pulp. They are a rich source of vitamins A and C and are widely cultivated in tropical and subtropical regions worldwide.</p>
+                <a href="https://www.britannica.com/plant/mango" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/olive.jpeg" alt="images 14">
+            <div class="description">
+                <h3>Olive Crops</h3>
+                <p>Olives are a key agricultural product used for oil production and as table fruit. They are cultivated extensively in the Mediterranean region and are valued for their healthy fats and antioxidants.</p>
+                <a href="https://www.britannica.com/plant/olive" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/cocoa.jpeg" alt="images 15">
+            <div class="description">
+                <h3>Cocoa Crops</h3>
+                <p>Cocoa beans are the primary ingredient in chocolate and are cultivated in tropical regions. The beans are processed into cocoa butter and powder, making them a vital crop for the confectionery industry.</p>
+                <a href="https://www.worldcocoafoundation.org/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/tea.jpeg" alt="images 16">
+            <div class="description">
+                <h3>Tea Crops</h3>
+                <p>Tea plants are cultivated for their leaves, which are processed to make one of the world’s most popular beverages. Major tea-growing regions include India, China, and Sri Lanka.</p>
+                <a href="https://www.britannica.com/topic/tea-beverage" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <div class="column">
+            <img src="images/grapes.jpeg" alt="images 18">
+            <div class="description">
+                <h3>Grape Vineyards</h3>
+                <p>Grapes are grown in vineyards and are used for fresh consumption, juice production, wine making, and raisins. They are one of the world’s most important fruit crops.</p>
+                <a href="https://www.britannica.com/plant/grape" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/sunflower.jpeg" alt="images 19">
+            <div class="description">
+                <h3>Sunflower Crops</h3>
+                <p>Sunflowers are grown for their edible seeds and oil production. The seeds are a popular snack, and sunflower oil is widely used for cooking and as a biodiesel source.</p>
+                <a href="https://www.nass.usda.gov/Charts_and_Maps/Field_Crops/sf-prod.php" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        
+        <div class="column">
+            <img src="images/strawberry.jpeg" alt="images 22">
+            <div class="description">
+                <h3>Strawberry Farms</h3>
+                <p>Strawberries are a popular berry crop known for their bright red color, sweet flavor, and high vitamin C content. They are widely used in desserts, jams, and fresh salads.</p>
+                <a href="https://www.britannica.com/plant/strawberry" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/weatherneed.jpeg" alt="images 23">
+            <div class="description">
+                <h3>Weather and Agriculture</h3>
+                <p>Weather conditions like temperature, rainfall, and humidity significantly affect crop growth and yield. Understanding climate patterns helps farmers optimize planting and harvesting cycles.</p>
+                <a href="https://www.fao.org/climate-change/our-work/what-we-do/en/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/typesofsoil.jpeg" alt="images 24">
+            <div class="description">
+                <h3>Types of Soil</h3>
+                <p>Soil types such as sandy, loamy, and clay soils impact crop suitability and water retention. Proper soil management enhances agricultural productivity and sustainability.</p>
+                <a href="https://www.soilhealth.com.au/types-of-soil/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/organicfarming.jpeg" alt="images 25">
+            <div class="description">
+                <h3>Organic Farming</h3>
+                <p>Organic farming focuses on sustainable practices, avoiding synthetic fertilizers and pesticides. It emphasizes crop rotation, composting, and biological pest control.</p>
+                <a href="https://www.ifoam.bio/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/agricultureeducation.jpeg" alt="images 26">
+            <div class="description">
+                <h3>Importance of Agriculture Education</h3>
+                <p>Agriculture education enables farmers to learn advanced techniques, improve productivity, and adapt to new challenges such as climate change and market demands.</p>
+                <a href="https://nifa.usda.gov/program/agricultural-education" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/precisionagriculture.jpeg" alt="images 27">
+            <div class="description">
+                <h3>Precision Agriculture</h3>
+                <p>Precision agriculture uses GPS, IoT, and data analytics to optimize farming operations. It improves efficiency by reducing resource wastage and increasing yields.</p>
+                <a href="https://www.agriculture.com/technology/precision-agriculture" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/aquaponics.jpeg" alt="images 28">
+            <div class="description">
+                <h3>Aquaponics</h3>
+                <p>Aquaponics combines fish farming and hydroponics to create a sustainable agricultural system. Fish waste fertilizes plants, while plants clean the water for fish.</p>
+                <a href="https://www.fao.org/aquaponics/en/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/agriculturemachinery.jpeg" alt="images 29">
+            <div class="description">
+                <h3>Agricultural Machinery</h3>
+                <p>Modern machinery such as tractors, plows, and harvesters has revolutionized agriculture, making large-scale farming efficient and reducing labor-intensive tasks.</p>
+                <a href="https://www.agweb.com/news/machinery" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/agriresearch.jpeg" alt="images 30">
+            <div class="description">
+                <h3>Agricultural Research</h3>
+                <p>Research in agriculture focuses on improving crop varieties, pest resistance, and sustainable practices. Institutions like CGIAR lead global agricultural innovations.</p>
+                <a href="https://www.cgiar.org/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/genetic.jpeg" alt="images 31">
+            <div class="description">
+                <h3>Genetic Engineering in Agriculture</h3>
+                <p>Genetic engineering modifies crops for higher yields, pest resistance, and climate adaptability. GMOs have sparked both innovation and debate in agriculture.</p>
+                <a href="https://www.genome.gov/about-genomics/policy-issues/Genetically-Modified-Organisms" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/agsci.jpeg" alt="images 32">
+            <div class="description">
+                <h3>Famous Agricultural Scientists</h3>
+                <p>Scientists like Norman Borlaug, known as the father of the Green Revolution, have significantly contributed to global food security through agricultural advancements.</p>
+                <a href="https://www.nobelprize.org/prizes/peace/1970/borlaug/biographical/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/irrigation.jpeg" alt="images 33">
+            <div class="description">
+                <h3>Irrigation Systems</h3>
+                <p>Irrigation systems, including drip, sprinkler, and surface irrigation, ensure efficient water distribution, maximizing crop productivity in water-scarce regions.</p>
+                <a href="https://www.fao.org/land-water/databases-and-software/irrigation/en/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/finance.jpeg" alt="images 34">
+            <div class="description">
+                <h3>Agricultural Financing</h3>
+                <p>Access to credit and insurance helps farmers invest in better technologies, mitigate risks, and stabilize incomes. Financial inclusion is key to sustainable farming.</p>
+                <a href="https://www.worldbank.org/en/topic/agriculture/overview" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/farmdrainage.jpeg" alt="images 35">
+            <div class="description">
+                <h3>Farm Drainage</h3>
+                <p>Drainage systems remove excess water from fields, improving soil structure and crop yields while preventing waterlogging and salinization.</p>
+                <a href="https://www.nrcs.usda.gov/wps/portal/nrcs/main/soils/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/covercropping.jpeg" alt="images 36">
+            <div class="description">
+                <h3>Cover Cropping</h3>
+                <p>Cover crops like clover and rye improve soil health, prevent erosion, and enhance nutrient cycling, promoting sustainable agricultural practices.</p>
+                <a href="https://www.sare.org/resources/cover-crops/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/croprotation.jpeg" alt="images 37">
+            <div class="description">
+                <h3>Crop Rotation</h3>
+                <p>Crop rotation involves growing different types of crops in a sequence on the same field to improve soil fertility and reduce pest and disease risks.</p>
+                <a href="https://www.sare.org/resources/crop-rotation-on-organic-farms/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/farmerscooperative.jpeg" alt="images 38">
+            <div class="description">
+                <h3>Farmers’ Cooperatives</h3>
+                <p>Farmers' cooperatives help smallholders access markets, negotiate better prices, and share resources like equipment and infrastructure.</p>
+                <a href="https://www.ica.coop/en/cooperatives/agriculture-cooperatives" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/greenhouses.jpeg" alt="images 39">
+            <div class="description">
+                <h3>Greenhouses</h3>
+                <p>Greenhouses allow controlled-environment farming, enabling year-round crop production, protection from pests, and improved yields.</p>
+                <a href="https://www.extension.iastate.edu/smallfarms/using-high-tunnels-greenhouses" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/livestockfarming.jpeg" alt="images 40">
+            <div class="description">
+                <h3>Livestock Farming</h3>
+                <p>Livestock farming involves raising animals like cattle, sheep, and goats for meat, milk, wool, and leather, contributing significantly to the global economy.</p>
+                <a href="https://www.fao.org/livestock-environment/en/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/soilfertility.jpeg" alt="images 41">
+            <div class="description">
+                <h3>Soil Fertility Management</h3>
+                <p>Techniques like composting, crop residue management, and balanced fertilizer use maintain soil fertility and boost agricultural productivity.</p>
+                <a href="https://www.fao.org/soils-portal/soil-fertility/en/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/climates.jpeg" alt="images 42">
+            <div class="description">
+                <h3>Climate-Smart Agriculture</h3>
+                <p>Climate-smart agriculture adapts farming practices to changing climates, improving resilience and reducing greenhouse gas emissions.</p>
+                <a href="https://www.fao.org/climate-smart-agriculture/en/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/medicalfarming.jpeg" alt="images 43">
+            <div class="description">
+                <h3>Medical Farming</h3>
+                <p>Medical farming focuses on cultivating medicinal plants like aloe vera, turmeric, and ashwagandha. These crops are used in pharmaceuticals, herbal remedies, and traditional medicine systems.</p>
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3809535/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="images/policy.jpeg" alt="images 44">
+            <div class="description">
+                <h3>Agricultural Policies</h3>
+                <p>Agricultural policies shape farming practices through subsidies, trade regulations, and sustainability initiatives, promoting economic stability and food security.</p>
+                <a href="https://www.fao.org/policy-support/en/" class="read-more-btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+                                
+    </div>
+</body>
+</html>
